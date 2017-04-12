@@ -9,12 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.1",
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "express": "^4.15.2",
+    "imdb-api": "^2.2.2",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.4",
     "morgan": "^1.8.1",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "youtube-node": "^1.3.0"
   }
 }
