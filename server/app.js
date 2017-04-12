@@ -15,7 +15,7 @@ app.use('/api',api);
 app.use(cors());
 app.use(logger('dev'));
 mongoose.promise = global.promise;
-mongoose.connect('mongodb://localhost/hacktivoverflow', (err) => {
+mongoose.connect('mongodb://localhost/databasename', (err) => {
   if(err) {
     console.log(err);
   }else {
