@@ -2,8 +2,8 @@
 <div class="theater">
   <el-popover ref="popover4" placement="right" width="250" trigger="click">
     <el-row :gutter='5'>
-      <el-col :md="8" v-for='jadwal in theaterinfo.jadwal' class="givmargin">
-          <el-button type="primary" @click='sendtelegram(jadwal)'>{{jadwal}}</el-button>
+      <el-col :md="8" v-for='jam in theaterinfo.jam' class="givmargin">
+          <el-button type="primary" @click='sendtelegram(jam)'>{{jam}}</el-button>
       </el-col>
     </el-row>
 
@@ -21,7 +21,7 @@ export default {
     return {
       theaterinfo: {
         name: 'gandaria',
-        jadwal: [
+        jam: [
           '12.30',
           '12.45',
           '14.90',
