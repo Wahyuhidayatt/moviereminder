@@ -18,7 +18,8 @@ export default {
   name : 'ytb',
   data () {
     return {
-      cityid : ''
+      cityid : '',
+      videoId : 'M7lc1UVf-VE'
     }
   },
   methods: {
