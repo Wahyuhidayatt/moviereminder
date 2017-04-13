@@ -21,9 +21,10 @@ export default new Router({
               component : Main
             },
             {
-              path: '/page',
+              path: '/page/:title',
               name : 'Page',
-              component : Page
+              component : Page,
+              props : true
             },
             {
               path: '/youtube',
