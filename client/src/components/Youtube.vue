@@ -1,10 +1,8 @@
 <template lang="html">
   <div id="#ytb">
   <section>
-      <el-input placeholder="Please input" v-model="cityid"></el-input>
-       <el-button type="success" @click="postData">Success</el-button>
     <h2>Trailer Film</h2>
-    <youtube :video-id="videoId" @ready="ready" @playing="playing" player-width="580" player-height="300"></youtube>
+    <youtube :video-id="videoId" @ready="ready" @playing="playing" player-width="480" player-height="300"></youtube>
   </section>
   <!-- <section>
     <h2>add options</h2>
@@ -45,19 +43,6 @@ export default {
     },
     pause () {
       this.player.pauseVideo()
-    },
-    postData() {
-      var self = this
-      this.axios.post('http://localhost:3000/api/getscedule', {
-        cityid: this.cityid
-      })
-      .then(function (response) {
-
-        self.videoId = response.data[0].youTubeId
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
     }
   }
 }

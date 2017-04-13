@@ -8,7 +8,6 @@ import Page from '@/components/PageReview'
 import Main from '@/components/MainApp'
 import FormRequest from '@/components/FormRequest'
 import FormRemind from '@/components/FormRemind'
-
 import Theater from '@/components/theater'
 import Headernav from '@/components/Headernav'
 
@@ -26,8 +25,9 @@ export default new Router({
             {
               path: '/film/:title',
               name : 'Review',
-              component : Page,
-              props : true
+              path: '/card',
+              name : 'Card',
+              component : Card
             },
             {
               path: '/youtube',

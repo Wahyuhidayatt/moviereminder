@@ -5,19 +5,33 @@
    <el-option
      v-for="data in dataBioskop"
      :label="data.kota"
-     :value="data.id"
+     :value="data.id">
    </el-option>
  </el-select>
- <el-button @click="getData(index)">Search</el-button>
-        </el-menu>
+ <el-button @click="getData()">Search</el-button>
+  </el-menu>
+  <div class="container">
+    <el-row :gutter="10">
+      <el-col :md="12" v-for="data in movieData" >
+        <card class='cardstyle'></card>
+      </el-col>
+
+    </el-row>
+  </div>
+
   </div>
 </template>
 <script>
+import Card from './Card'
 export default {
+  components:{
+    Card
+  },
   data() {
     return {
       activeIndex: '1',
       activeIndex2: '1',
+      movieData : '',
       dataBioskop : [ { id: '32', kota: 'Ambon' },
        { id: '6', kota: 'Balikpapan' },
        { id: '2', kota: 'Bandung' },
@@ -31,7 +45,6 @@ export default {
        { id: '9', kota: 'Denpasar' },
        { id: '38', kota: 'Gorontalo' },
        { id: '10', kota: 'Jakarta' },
-
        { id: '21', kota: 'Jambi' },
        { id: '37', kota: 'Jayapura' },
        { id: '43', kota: 'Karawang' },
@@ -55,8 +68,7 @@ export default {
        { id: '15', kota: 'Tangerang' },
        { id: '36', kota: 'Tasikmalaya' },
        { id: '23', kota: 'Yogyakarta' } ],
-        value : '',
-        index : ''
+        value : ''
     };
   },
   methods: {
@@ -64,11 +76,38 @@ export default {
       console.log(key, keyPath);
     },
     getData(id){
-      console.log(this.value);
+      var self = this
+      this.axios.post('http://localhost:3000/api/getscedule', {
+        cityid: this.value
+
+      })
+      .then(function (response) {
+
+        self.movieData = response.data
+        console.log(self.movieData );
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     }
   }
 }
 </script>
 <style>
+.container{
+  margin-left: 50px;
+  margin-right:100px;
+  min-width: 1400px;
+}
+.cardstyle{
+  margin: 20px;
+}
+.box-card[data-v-2db64e16] {
+    width: 508px;
+}
+.el-col.el-col-24.el-col-md-12 {
+    width: 42%;
+}
+
 
 </style>
