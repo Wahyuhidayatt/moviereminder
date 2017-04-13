@@ -8,6 +8,10 @@ import Page from '@/components/PageReview'
 import Main from '@/components/MainApp'
 import FormRequest from '@/components/FormRequest'
 import FormRemind from '@/components/FormRemind'
+<<<<<<< HEAD
+import Theater from '@/components/theater'
+import Headernav from '@/components/Headernav'
+
 
 Vue.use(Router)
 Vue.use(Vuetify)
@@ -34,7 +38,16 @@ export default new Router({
               path: '/form',
               name : 'Form',
               component : FormRequest
+            },
+            {
+              path: '/theater',
+              name : 'Theater',
+              component : Theater
+            },
+            {
+              path: '/headernav',
+              name : 'Headernav',
+              component : Headernav
             }
-
           ]
         })
