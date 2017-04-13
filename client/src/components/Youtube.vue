@@ -14,10 +14,11 @@
 <script>
 export default {
   name : 'ytb',
+  props:['youtubedata'],
   data () {
     return {
       cityid : '',
-      videoId : ''
+      videoId : this.youtubedata
     }
   },
   methods: {

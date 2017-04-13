@@ -9,7 +9,7 @@
 
   </el-popover>
 
-  <el-button v-popover:popover4>{{theaterinfo.name}}</el-button>
+  <el-button v-popover:popover4>{{theaterinfo.bioskop}}</el-button>
 
 </div>
 </template>
@@ -17,19 +17,10 @@
 <script>
 export default {
   name: 'theater',
+  props:['datajadwal'],
   data() {
     return {
-      theaterinfo: {
-        name: 'gandaria',
-        jam: [
-          '12.30',
-          '12.45',
-          '14.90',
-          '12.30',
-          '12.45',
-          '14.90'
-        ]
-      }
+      theaterinfo: this.datajadwal
     }
   },
   methods: {
