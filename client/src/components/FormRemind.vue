@@ -18,7 +18,7 @@
       </el-form-item>
       <el-form-item v-if="active == 2">
         <h5>Hai {{form.name}}</h5>
-        <h6>Kami akan mengirimkan notifikasi ke email anda</h6>
+        <h6>Kami akan mengirimkan notifikasi ke telegram anda</h6>
       </el-form-item>
     </el-form>
       </el-steps>
@@ -52,7 +52,8 @@
       kirimTelegram(){
         this.active = 0
         this.dialogFormVisible = false
-
+        this.form.name = ''
+        this.form.telegram = ''
       }
     }
   }
