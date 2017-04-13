@@ -23,6 +23,11 @@ export default new Router({
               component : Main
             },
             {
+              path: '/card',
+              name : 'Card',
+              component : Card
+            },
+            {
               path: '/page/:title',
               name : 'Page',
               component : Page,

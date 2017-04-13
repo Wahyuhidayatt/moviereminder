@@ -1,17 +1,22 @@
 <template>
 <div class="card">
- <youtube></youtube>
+  <el-card class="box-card" :body-style="{ padding: '0px' }">
+    <youtube class="youtubeframe"></youtube>
+    <movieinfo class='movieinfostyle'></movieinfo>
+ </el-card>
 
 </div>
 </template>
 
 <script>
 import Youtube from './Youtube'
+import Movieinfo from './movieinfo'
 export default {
   name: 'Card',
   components:{
-    Youtube
-  }
+    Youtube,
+    Movieinfo
+  },
   data() {
     return {
 
@@ -35,5 +40,20 @@ a {
 .givmargin {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.youtubeframe{
+ position: relative;
+ width: 550px;
+  top: 10px;
+  left: 10px;
+}
+.box-card{
+  width: 600px;
+  padding: 0px;
+}
+.movieinfostyle{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 25px;
 }
 </style>
