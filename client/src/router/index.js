@@ -8,7 +8,7 @@ import Page from '@/components/PageReview'
 import Main from '@/components/MainApp'
 import FormRequest from '@/components/FormRequest'
 import FormRemind from '@/components/FormRemind'
-<<<<<<< HEAD
+
 import Theater from '@/components/theater'
 import Headernav from '@/components/Headernav'
 
@@ -24,8 +24,8 @@ export default new Router({
               component : Main
             },
             {
-              path: '/page/:title',
-              name : 'Page',
+              path: '/film/:title',
+              name : 'Review',
               component : Page,
               props : true
             },
