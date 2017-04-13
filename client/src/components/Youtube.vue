@@ -19,7 +19,7 @@ export default {
   data () {
     return {
       cityid : '',
-      videoId : 'M7lc1UVf-VE'
+      videoId : ''
     }
   },
   methods: {
@@ -47,10 +47,12 @@ export default {
       this.player.pauseVideo()
     },
     postData() {
-      this.axios.post('http://localhost:3000/api/getscedule', this.cityid)
+      var self = this
+      this.axios.post('http://localhost:3000/api/getscedule', {
+        cityid: this.cityid
+      })
       .then(function (response) {
-        console.log(response.youTubeId);
-        window.location.reload();
+        self.videoId = response.data[0].youTubeId
       })
       .catch(function (error) {
         console.log(error);
