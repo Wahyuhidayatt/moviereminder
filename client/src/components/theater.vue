@@ -17,10 +17,11 @@
 <script>
 export default {
   name: 'theater',
-  props:['datajadwal'],
+  props:['datajadwal','judul'],
   data() {
     return {
-      theaterinfo: this.datajadwal
+      theaterinfo: this.datajadwal,
+      judulfilm:this.judul
     }
   },
   methods: {

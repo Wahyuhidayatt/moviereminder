@@ -13,7 +13,7 @@
       <el-col :md="13" :offset='0'>
             <el-row>
               <el-col :md="8" v-for='jadwal in datamovie.jadwal'class='addmargin' >
-                <theater v-bind:datajadwal="jadwal"></theater>
+                <theater v-bind:datajadwal="jadwal" v-bind:judul="datamovie.movie"></theater>
               </el-col :md="8" >
             </el-row>
       </el-col>
