@@ -102,6 +102,12 @@ export default {
 .cardstyle{
   margin: 20px;
 }
+.box-card[data-v-2db64e16] {
+    width: 508px;
+}
+.el-col.el-col-24.el-col-md-12 {
+    width: 42%;
+}
 
 
 </style>

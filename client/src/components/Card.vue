@@ -52,7 +52,7 @@ a {
     margin-left: 28px;
 }
 .box-card[data-v-2db64e16] {
-    width: 505px;
+    width: 508px;
 }
 /*.youtubeframe{
  position: relative;
