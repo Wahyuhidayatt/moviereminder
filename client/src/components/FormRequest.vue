@@ -1,7 +1,7 @@
 <template>
 <el-form :inline="true" :model="form" class="form-chat">
   <el-form-item>
-    <el-input v-model="form.email" placeholder="Email anda"></el-input>
+    <el-input v-model="form.nama" placeholder="Nama anda"></el-input>
   </el-form-item>
   <el-form-item>
     <el-input v-model="form.opinion" placeholder="Pendapat anda"></el-input>
@@ -23,7 +23,7 @@
     data() {
       return {
         form: {
-          email: '',
+          nama: '',
           opinion: ''
         },
         rating : null
