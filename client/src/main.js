@@ -7,11 +7,13 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import ElementUI from 'element-ui'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 import 'element-ui/lib/theme-default/index.css'
 
 
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
+Vue.use(VueYouTubeEmbed)
 
 Vue.config.productionTip = false
 
@@ -20,5 +22,5 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
 })

@@ -1,6 +1,7 @@
 
 <template lang="html">
 
+
 <header-navigation></header-navigation>
 
 </template>
@@ -11,7 +12,11 @@ import HeaderNavigation from './HeaderNav'
 export default {
   components : {
     HeaderNavigation
-  }
+  },
+  method (url) {
+      this.videoId = this.$youtube.getIdFromURL(url)
+      this.startTime = this.$youtube.getTimeFromURL(url)
+    }
 }
 </script>
 
