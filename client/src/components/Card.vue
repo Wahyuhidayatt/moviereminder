@@ -1,17 +1,17 @@
 
 <template lang="html">
 
-<header-try></header-try>
-<!-- <youtube :video-id="videoId"></youtube> -->
+
+<header-navigation></header-navigation>
 
 </template>
 
 <script>
-import HeaderTry from './HeaderTry'
+import HeaderNavigation from './HeaderNav'
 
 export default {
   components : {
-    HeaderTry,
+    HeaderNavigation
   },
   method (url) {
       this.videoId = this.$youtube.getIdFromURL(url)
