@@ -9,6 +9,7 @@ import Main from '@/components/MainApp'
 import FormRequest from '@/components/FormRequest'
 import FormRemind from '@/components/FormRemind'
 import Theater from '@/components/theater'
+import Headernav from '@/components/Headernav'
 
 
 Vue.use(Router)
@@ -42,6 +43,11 @@ export default new Router({
               name : 'Theater',
               component : Theater
             },
+            {
+              path: '/headernav',
+              name : 'Headernav',
+              component : Headernav
+            }
 
           ]
         })
