@@ -52,6 +52,7 @@ export default {
         cityid: this.cityid
       })
       .then(function (response) {
+
         self.videoId = response.data[0].youTubeId
       })
       .catch(function (error) {
