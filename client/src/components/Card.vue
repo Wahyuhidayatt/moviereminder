@@ -1,25 +1,39 @@
+<template>
+<div class="card">
+ <youtube></youtube>
 
-<template lang="html">
-
-
-<header-navigation></header-navigation>
-
+</div>
 </template>
 
 <script>
-import HeaderNavigation from './HeaderNav'
-
+import Youtube from './Youtube'
 export default {
-  components : {
-    HeaderNavigation
-  },
-  method (url) {
-      this.videoId = this.$youtube.getIdFromURL(url)
-      this.startTime = this.$youtube.getTimeFromURL(url)
+  name: 'Card',
+  components:{
+    Youtube
+  }
+  data() {
+    return {
+
     }
+  },
+  methods: {
+
+  }
+
 }
 </script>
 
-<style lang="css">
-
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+a {
+  color: #42b983;
+}
+.el-col {
+  border-radius: 4px;
+}
+.givmargin {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 </style>
