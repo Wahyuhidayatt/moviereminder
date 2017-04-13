@@ -2,7 +2,7 @@
   <div id="#ytb">
   <section>
     <h2>Trailer Film</h2>
-    <youtube :video-id="videoId" @ready="ready" @playing="playing" player-width="480" player-height="300"></youtube>
+    <youtube :video-id="videoId" @ready="ready" @playing="playing" player-width="510" player-height="300"></youtube>
   </section>
   <!-- <section>
     <h2>add options</h2>
