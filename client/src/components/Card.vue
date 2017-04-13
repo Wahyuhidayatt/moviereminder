@@ -1,16 +1,16 @@
 
 <template lang="html">
 
-<header-try></header-try>
+<header-navigation></header-navigation>
 
 </template>
 
 <script>
-import HeaderTry from './HeaderTry'
+import HeaderNavigation from './HeaderNav'
 
 export default {
   components : {
-    HeaderTry
+    HeaderNavigation
   }
 }
 </script>
