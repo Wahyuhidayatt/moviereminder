@@ -5,6 +5,10 @@ const logger = require('morgan');
 const cors = require('cors');
 const app = express();
 
+const api=require('./routers/api')
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/api',api);
 //require file routes
 
 
@@ -18,8 +22,7 @@ mongoose.connect('mongodb://localhost/databasename', (err) => {
     console.log('Database connect');
   }
 });
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+
 app.listen(3000);
 
 //rest API
