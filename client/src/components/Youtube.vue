@@ -18,7 +18,8 @@ export default {
   name : 'ytb',
   data () {
     return {
-      cityid : ''
+      cityid : '',
+      videoId : ''
     }
   },
   methods: {
@@ -48,8 +49,8 @@ export default {
     postData() {
       this.axios.post('http://localhost:3000/api/getscedule', this.cityid)
       .then(function (response) {
-        console.log(response.youTubeId);
-        window.location.reload();
+        console.log(response);
+
       })
       .catch(function (error) {
         console.log(error);

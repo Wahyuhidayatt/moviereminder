@@ -6,13 +6,14 @@ const cors = require('cors');
 const app = express();
 
 const api=require('./routers/api')
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api',api);
 //require file routes
 
 
-app.use(cors());
+
 app.use(logger('dev'));
 mongoose.promise = global.promise;
 mongoose.connect('mongodb://localhost/databasename', (err) => {
