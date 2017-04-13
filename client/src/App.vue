@@ -1,18 +1,13 @@
 <template>
   <div id="app">
-    <!-- <router-view></router-view> -->
-    <card></card>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Card from './components/Card'
 
 export default {
   name: 'app',
-  components : {
-    Card
-  }
 }
 </script>
 
