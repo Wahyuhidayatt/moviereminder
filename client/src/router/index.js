@@ -8,6 +8,7 @@ import Page from '@/components/PageReview'
 import Main from '@/components/MainApp'
 import FormRequest from '@/components/FormRequest'
 import FormRemind from '@/components/FormRemind'
+import Theater from '@/components/theater'
 
 
 Vue.use(Router)
@@ -37,9 +38,10 @@ export default new Router({
               component : FormRequest
             },
             {
-              path: '/remind',
-              name : 'Remind',
-              component : FormRemind
-            }
+              path: '/theater',
+              name : 'Theater',
+              component : Theater
+            },
+
           ]
         })
