@@ -43,19 +43,6 @@ export default {
     },
     pause () {
       this.player.pauseVideo()
-    },
-    postData() {
-      var self = this
-      this.axios.post('http://localhost:3000/api/getscedule', {
-        cityid: this.cityid
-      })
-      .then(function (response) {
-
-        self.videoId = response.data[0].youTubeId
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
     }
   }
 }

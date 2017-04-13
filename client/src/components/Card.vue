@@ -5,6 +5,13 @@
    <Movieinfo></Movieinfo>
   </div>
 </el-card>
+<!-- <div class="card">
+  <el-card class="box-card" :body-style="{ padding: '0px' }">
+    <youtube class="youtubeframe"></youtube>
+    <movieinfo class='movieinfostyle'></movieinfo>
+ </el-card>
+
+</div> -->
 </template>
 
 <script>
@@ -47,11 +54,19 @@ a {
 .box-card[data-v-2db64e16] {
     width: 505px;
 }
-/*.card {
-    position: absolute;
-    top : 0px;
-    left : 0px;
-    border-radius: 2px;
-    min-width: 0;
-  }*/
+/*.youtubeframe{
+ position: relative;
+ width: 550px;
+  top: 10px;
+  left: 10px;
+}
+.box-card{
+  width: 600px;
+  padding: 0px;
+}
+.movieinfostyle{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}*/
 </style>
