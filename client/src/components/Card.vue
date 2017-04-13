@@ -1,8 +1,8 @@
 <template>
 <el-card class="Card">
   <div class="box-card">
-   <youtube></youtube>
-   <Movieinfo></Movieinfo>
+   <youtube v-bind:youtubedata="datacard.youTubeId"></youtube>
+   <Movieinfo v-bind:moviedata="datacard"></Movieinfo>
   </div>
 </el-card>
 <!-- <div class="card">
@@ -19,13 +19,14 @@ import Youtube from './Youtube'
 import Movieinfo from './movieinfo'
 export default {
   name: 'card',
+  props:['carddata'],
   components:{
     Youtube,
     Movieinfo
   },
   data() {
     return {
-
+     datacard:this.carddata
     }
   },
   methods: {

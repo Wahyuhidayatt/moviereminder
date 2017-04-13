@@ -13,7 +13,7 @@
   <div class="container">
     <el-row :gutter="10">
       <el-col :md="12" v-for="data in movieData" >
-        <card class='cardstyle'></card>
+        <card class='cardstyle' v-bind:carddata="data"></card>
       </el-col>
 
     </el-row>
