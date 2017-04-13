@@ -9,11 +9,24 @@
    </el-option>
  </el-select>
  <el-button @click="getData()">Search</el-button>
-        </el-menu>
+  </el-menu>
+  <div class="container">
+    <el-row :gutter="10">
+      <el-col :md="12" v-for="data in movieData" >
+        <card class='cardstyle'></card>
+      </el-col>
+
+    </el-row>
+  </div>
+
   </div>
 </template>
 <script>
+import Card from './Card'
 export default {
+  components:{
+    Card
+  },
   data() {
     return {
       activeIndex: '1',
@@ -81,5 +94,14 @@ export default {
 }
 </script>
 <style>
+.container{
+  margin-left: 50px;
+  margin-right:100px;
+  min-width: 1400px;
+}
+.cardstyle{
+  margin: 20px;
+}
+
 
 </style>

@@ -18,7 +18,7 @@
 import Youtube from './Youtube'
 import Movieinfo from './movieinfo'
 export default {
-  name: 'Card',
+  name: 'card',
   components:{
     Youtube,
     Movieinfo
