@@ -5,10 +5,10 @@
    <el-option
      v-for="data in dataBioskop"
      :label="data.kota"
-     :value="data.id"
+     :value="data.id">
    </el-option>
  </el-select>
- <el-button @click="getData(index)">Search</el-button>
+ <el-button @click="getData()">Search</el-button>
         </el-menu>
   </div>
 </template>
@@ -18,6 +18,7 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
+      movieData : '',
       dataBioskop : [ { id: '32', kota: 'Ambon' },
        { id: '6', kota: 'Balikpapan' },
        { id: '2', kota: 'Bandung' },
@@ -31,7 +32,6 @@ export default {
        { id: '9', kota: 'Denpasar' },
        { id: '38', kota: 'Gorontalo' },
        { id: '10', kota: 'Jakarta' },
-
        { id: '21', kota: 'Jambi' },
        { id: '37', kota: 'Jayapura' },
        { id: '43', kota: 'Karawang' },
@@ -55,8 +55,7 @@ export default {
        { id: '15', kota: 'Tangerang' },
        { id: '36', kota: 'Tasikmalaya' },
        { id: '23', kota: 'Yogyakarta' } ],
-        value : '',
-        index : ''
+        value : ''
     };
   },
   methods: {
@@ -64,7 +63,19 @@ export default {
       console.log(key, keyPath);
     },
     getData(id){
-      console.log(this.value);
+      var self = this
+      this.axios.post('http://localhost:3000/api/getscedule', {
+        cityid: this.value
+
+      })
+      .then(function (response) {
+
+        self.movieData = response.data
+        console.log(self.movieData );
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     }
   }
 }
