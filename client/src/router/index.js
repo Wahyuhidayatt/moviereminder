@@ -23,15 +23,11 @@ export default new Router({
               component : Main
             },
             {
+              path: '/film/:title',
+              name : 'Review',
               path: '/card',
               name : 'Card',
               component : Card
-            },
-            {
-              path: '/page/:title',
-              name : 'Page',
-              component : Page,
-              props : true
             },
             {
               path: '/youtube',

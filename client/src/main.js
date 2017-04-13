@@ -7,6 +7,8 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import ElementUI from 'element-ui'
+import VueFire from 'vuefire'
+import Firebase from 'firebase'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import 'element-ui/lib/theme-default/index.css'
 
@@ -14,6 +16,7 @@ import 'element-ui/lib/theme-default/index.css'
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
 Vue.use(VueYouTubeEmbed)
+Vue.use(VueFire)
 
 Vue.config.productionTip = false
 
